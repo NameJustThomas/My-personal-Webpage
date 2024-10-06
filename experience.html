@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Dinh Binh Thanh Thong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/IMG_20220807_203849.jpg"> 
+</head>
+<body>
+    <header>
+        <h1>Dinh Binh Thanh Thong - ITITWE19027</h1>
+    </header>
+    <main class="content-wrapper">
+        <div class="left-column">
+            <img src="images/z5691957198071_cb6a86bcd8cffa8c18c9af26b5699607.jpg" alt="Ảnh đại diện của tôi" class="avatar-image" id="avatar">
+        </div>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="show-gallery">Gallery</a></li> <!-- Nút để hiển thị thư viện ảnh -->
+            </ul>
+        </nav>
+        <div class="right-column" id="content">
+            <h2>My Experience</h2>
+            <div class="experience-buttons">
+                <button onclick="showExperience('itSales')">IT SALES</button>
+                <button onclick="showExperience('tester')">TESTER</button>
+                <button onclick="showExperience('assistant')">ASSISTANT</button>
+            </div>
+            <div id="experience-content">
+                <div id="itSales" class="experience" style="display: none;">
+                    <p>IT SALES WEB 06/2021 - 07/2022</p>
+                    <p>Nina Company</p>
+                    <p>Job description:</p>
+                    <p>• Finding new and existing consumers, utilizing them, and creating lasting
+                        relationships with them are all responsibilities of the position.</p>
+                    <p>• Engage in sales operations such contract signing, contract negotiation,
+                        and information support with customers.</p>
+                    <p>• Arrange meetings between members of the project team and the clients.</p>
+                    <p>• Assisting and counseling clients when the service is being implemented.</p>
+                    <p>• Assistance in creating business ideas, marketing, and post-purchase
+                        customer service.</p>
+                    <p>• Create demonstration scenarios and offer solutions.</p>
+                </div>
+                <div id="tester" class="experience" style="display: none;">
+                    <p>TESTER SOFTWARE PRODUCT 09/2022 - 12/2023</p>
+                    <p>GB Smart Joint Stock Innovation</p>
+                    <p>Job description:</p>
+                    <p>• Create a test case.</p>
+                    <p>• Identify and correct bugs in the company's software offerings.</p>
+                    <p>• Report serious software bugs to the developers and offer assistance.</p>
+                    <p>• Offer suggestions for software development feedback.</p>
+                </div>
+                <div id="assistant" class="experience" style="display: none;">
+                    <p>ASSISTANT 09/2020 - Now</p>
+                    <p>LLC Thông Tân Bình</p>
+                    <p>Job description:</p>
+                    <p>• Create material for meetings, seminars, paperwork, and administrative tasks.</p>
+                    <p>• Handle and reply to business emails and phone calls.</p>
+                    <p>• Give the director some investment-worthy product recommendations.</p>
+                    <p>• Contribute ideas to business plans and respond to inquiries from entrepreneurs
+                        regarding consumer incentives and market trends.</p>
+                    <p>• Customer support for product maintenance, legal expertise, and customer
+                        service.</p>
+                    <p>• Social media platform marketing for businesses and goods.</p>
+                    <p>• Manage the website for the business.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Dinh Binh Thanh Thong</p>
+    </footer>
+
+    <script>
+        // JavaScript để hiển thị thư viện ảnh
+        document.getElementById('show-gallery').onclick = function() {
+            var gallery = document.getElementById('gallery');
+            gallery.style.display = gallery.style.display === 'none' ? 'block' : 'none';
+        };
+
+        // Hàm để thay đổi ảnh đại diện
+        function changeAvatar(imageSrc) {
+            document.getElementById('avatar').src = imageSrc;
+            document.getElementById('gallery').style.display = 'none';
+        }
+
+        // Hàm để hiển thị kinh nghiệm
+        function showExperience(experienceId) {
+            var experiences = document.querySelectorAll('.experience');
+            experiences.forEach(function(exp) {
+                exp.style.display = 'none'; // Ẩn tất cả kinh nghiệm
+            });
+            document.getElementById(experienceId).style.display = 'block'; // Hiển thị kinh nghiệm được chọn
+        }
+    </script>
+</body>
+</html>

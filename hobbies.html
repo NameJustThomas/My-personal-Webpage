@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - Dinh Binh Thanh Thong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/IMG_20220807_203849.jpg"> 
+</head>
+<body>
+    <header>
+        <h1>Dinh Binh Thanh Thong - ITITWE19027</h1>
+    </header>
+    <main class="content-wrapper">
+        <div class="left-column">
+            <img src="images/z5691957210453_80e400c7a8e55a6e6c0a220f4d119337.jpg" alt="Ảnh đại diện của tôi" class="avatar-image">
+        </div>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="show-gallery">Gallery</a></li> <!-- Nút để hiển thị thư viện ảnh -->
+            </ul>
+        </nav>
+        <div class="right-column" id="content">
+            <h2>My Hobbies</h2>
+            <ul>
+                <p>Basketball 🏀</p>
+                <p>Writing stories ✍️<a href="https://www.facebook.com/share/p/gmdUyAfugwqKpff7/" target="_blank">My stories on Facebook</a></p>
+                <p>Music 🎶<a href="https://open.spotify.com/user/31y6vjyymgxg5edjqrsrytb74x6m?si=73f96c7ff1384634" target="_blank">My Spotify</a></p>
+                <p>Games 🎮</p>
+            </ul>
+            <div id="gallery" style="display: none;">
+                <h3>Me in another universe</h3>
+                <img src="images/z5462590514800_1ccfc3c07cc8da93d83260d62e13aee8.jpg" alt="Hình ảnh 1" class="gallery-image" onclick="changeAvatar('images/z5462590514800_1ccfc3c07cc8da93d83260d62e13aee8.jpg')">
+                <img src="images/z5691954043607_5a24b93940330f9a460cb3f352fc9d4d.jpg" alt="Hình ảnh 2" class="gallery-image" onclick="changeAvatar('images/z5691954043607_5a24b93940330f9a460cb3f352fc9d4d.jpg')">
+                <img src="images/z5691957192067_2b53d39fe6c93bde55d4dc33eeec7eb6.jpg" alt="Hình ảnh 3" class="gallery-image" onclick="changeAvatar('images/z5691957192067_2b53d39fe6c93bde55d4dc33eeec7eb6.jpg')">
+                <img src="images/z5691957198071_cb6a86bcd8cffa8c18c9af26b5699607.jpg" alt="Hình ảnh 4" class="gallery-image" onclick="changeAvatar('images/z5691957198071_cb6a86bcd8cffa8c18c9af26b5699607.jpg')">
+                <img src="images/z5691957210453_80e400c7a8e55a6e6c0a220f4d119337.jpg" alt="Hình ảnh 4" class="gallery-image" onclick="changeAvatar('images/z5691957210453_80e400c7a8e55a6e6c0a220f4d119337.jpg')">
+                <img src="images/IMG_20220807_203849.jpg" alt="Hình ảnh 4" class="gallery-image" onclick="changeAvatar('images/IMG_20220807_203849.jpg')">
+                <img src="images/324025931_2100085846868439_2453501182083869475_n.jpg" alt="Hình ảnh 4" class="gallery-image" onclick="changeAvatar('images/324025931_2100085846868439_2453501182083869475_n.jpg')">
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Dinh Binh Thanh Thong</p>
+    </footer>
+
+    <script>
+        // JavaScript để hiển thị thư viện ảnh
+        document.getElementById('show-gallery').onclick = function() {
+            var gallery = document.getElementById('gallery');
+            gallery.style.display = gallery.style.display === 'none' ? 'block' : 'none';
+        };
+
+        // Hàm để thay đổi ảnh đại diện
+        function changeAvatar(imageSrc) {
+            document.getElementById('avatar').src = imageSrc;
+            document.getElementById('gallery').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

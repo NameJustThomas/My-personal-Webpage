@@ -1,0 +1,167 @@
+html, body {
+    height: 100%; /* Đặt chiều cao cho html và body */
+    margin: 0; /* Loại bỏ margin mặc định */
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    display: flex; /* Sử dụng flexbox cho body */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.content-wrapper {
+    display: flex; /* Sử dụng flexbox cho layout */
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+}
+
+.left-column {
+    flex: 0 0 200px; /* Chiều rộng cố định cho cột bên trái */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    height: 100%; /* Đặt chiều cao bằng 100% */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.avatar-image {
+    width: 100%; /* Đặt chiều rộng của ảnh đại diện */
+    border-radius: 50%; /* Làm tròn ảnh */
+    margin-bottom: 20px; /* Khoảng cách dưới ảnh */
+}
+
+.side-nav {
+    flex: 0 0 200px; /* Chiều rộng cố định cho cột nút */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    margin-bottom: 10px;
+}
+
+.side-nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển tiếp cho màu chữ */
+    width: 100%; /* Đặt chiều rộng của liên kết bằng 100% */
+}
+
+.side-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(0, 255, 234); /* Đổi màu chữ khi di chuột qua */
+}
+
+.right-column {
+    flex: 1; /* Chiếm phần còn lại của màn hình */
+    padding: 20px; /* Thêm padding cho nội dung */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.right-column h2 {
+    margin-top: 0; /* Loại bỏ margin trên */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    font-size: 1.8em; /* Kích thước chữ lớn hơn nếu cần */
+}
+
+.right-column p a:hover {
+    margin: 0; /* Loại bỏ margin mặc định */
+    line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+    color: rgb(0, 255, 234);
+}
+footer {
+    background-color: rgba(51, 51, 51, 0.13);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: auto; /* Đẩy footer xuống dưới cùng */
+}
+
+/* Thêm lớp overlay để làm cho nội dung dễ đọc hơn */
+.content-wrapper {
+    background-color: rgba(0, 0, 0, 0.479); /* Tạo lớp overlay tối */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 40px; /* Đảm bảo nội dung không bị che bởi footer */
+}
+
+header h1 {
+    margin: 0; /* Loại bỏ margin mặc định */
+    font-size: 1.2em; /* Giảm kích thước chữ */
+    line-height: 40px; /* Căn giữa theo chiều dọc */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.profile-image {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Giảm margin dưới của ảnh */
+}
+
+.profile-section h2 {
+    margin-top: 5px; /* Giảm margin trên của h2 */
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa h2 và đoạn văn bản bên dưới */
+}
+
+footer p {
+    margin: 0; /* Loại bỏ margin mặc định của đoạn văn */
+}
+
+.hidden {
+    display: none; /* Ẩn các phần tử có class hidden */
+}
+
+#image-gallery {
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100px; /* Chiều rộng của hình ảnh trong thư viện */
+    margin: 5px; /* Khoảng cách giữa các hình ảnh */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột qua hình ảnh */
+    border: 2px solid transparent; /* Đường viền mặc định */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho đường viền */
+}
+
+.gallery-image:hover {
+    border-color: #29f800; /* Đổi màu đường viền khi di chuột qua */
+}
